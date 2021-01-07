@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--测试运行以及输出测试报告-->
+<suite name="我自己的接口测试套件">
+    <test name="这些是测试模块">
+        <classes>
+            <class name="com.test.client.LoginCase">
+                <!--运行的方法-->
+                <methods>
+                    <include name="test1"></include>
+                    <include name="test2"></include>
+                </methods>
+            </class>
+            <class name="com.test.client.demoCase">
+                <!--运行的方法-->
+                <methods>
+                    <include name="test1"></include>
+                    <include name="test2"></include>
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+    <!--监听器  测试报告-->
+    <listeners>
+        <listener class-name="com.test.client.ExtentTestNGIReporterListener"></listener>
+    </listeners>
+</suite>
