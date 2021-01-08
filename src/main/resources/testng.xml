@@ -3,14 +3,14 @@
 <suite name="我自己的接口测试套件">
     <test name="这些是测试模块">
         <classes>
-            <class name="com.test.client.LoginCase">
+            <class name="com.test.testcase.LoginCase">
                 <!--运行的方法-->
                 <methods>
                     <include name="test1"></include>
                     <include name="test2"></include>
                 </methods>
             </class>
-            <class name="com.test.client.demoCase">
+            <class name="com.test.testcase.demoCase">
                 <!--运行的方法-->
                 <methods>
                     <include name="test1"></include>

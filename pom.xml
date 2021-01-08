@@ -82,7 +82,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.test.client.testGetAPI</mainClass>  <!-- 运行的主函数，根据自己项目的目录修改 -->
+                            <mainClass>com.test.testGetAPI</mainClass>  <!-- 运行的主函数，根据自己项目的目录修改 -->
                         </manifest>
                     </archive>
                     <descriptorRefs>

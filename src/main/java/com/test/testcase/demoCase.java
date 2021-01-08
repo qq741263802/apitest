@@ -1,32 +1,26 @@
-package com.test.client;
+package com.test.testcase;
+
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.JSONPath;
 import com.test.client.RestfulClient;
 import com.test.utils.HttpUtil;
-import org.apache.http.NameValuePair;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @Test
-public class LoginCase {
-
-
+public class demoCase {
     RestfulClient httpClientPost = new RestfulClient();
     Map map = new HashMap();
     HashMap<String,String> header = new HashMap<>();
-    @BeforeTest
-    public void setup(){
-        System.out.println("用例执行前执行");
-    }
+
+
     @Test
-    public void test1() throws IOException {
+    public void test3() throws IOException {
         //构造登录参数
         String url="http://124.172.188.110:31907/gateway/deepexi.dd.system.mall/admin-api/v1/app/login/loging";
         JSONObject json = new JSONObject();
@@ -41,7 +35,7 @@ public class LoginCase {
 
     }
     @Test
-    public void test2() throws Exception{
+    public void test4() throws Exception{
 
         String url="http://124.172.188.110:31907/gateway/deepexi.dd.domain.tool/admin-api/v1/domain/toolAuthorizeCommodity/pageEsGoodInformation?userId=10074&tenantId=gree&appId=623&sortType=5&size=20&page=1";
         String result = HttpUtil.doGet(url,map,header);
@@ -50,10 +44,4 @@ public class LoginCase {
         Assert.assertEquals(resultJson.get("code"),"0");
 
     }
-    @AfterTest
-    public void teardown(){
-
-        System.out.println("用例执行完后执行");
-    }
-
 }
