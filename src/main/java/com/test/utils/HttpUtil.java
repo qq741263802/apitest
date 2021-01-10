@@ -105,7 +105,7 @@ public class HttpUtil {
             }
 
             CloseableHttpResponse response = client.execute(httpPost);
-
+            System.out.println(response);
             //判断请求是否成功
             int code = response.getStatusLine().getStatusCode();
             if (code != 200 ){

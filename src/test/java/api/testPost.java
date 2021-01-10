@@ -5,13 +5,10 @@ import org.testng.annotations.Test;
 
 import com.alibaba.fastjson.JSONObject;
 import com.test.client.RestfulClient;
-import com.test.utils.JSONParser;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.message.BasicNameValuePair;
@@ -21,7 +18,6 @@ import org.testng.annotations.BeforeClass;
 public class testPost {
     RestfulClient client;
     JSONObject responseBody;
-    JSONParser jParser;
     int responseCode;
     String city;
     String url = "https://api.apishop.net/communication/phone/getLocationByPhoneNum";
@@ -51,8 +47,7 @@ public class testPost {
         responseCode = client.getCodeInNumber();
 
         System.out.println(responseBody);
-        jParser = new JSONParser();
-        city = jParser.getCity(responseBody);
+
     }
 
 }
